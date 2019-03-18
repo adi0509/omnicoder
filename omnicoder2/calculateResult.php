@@ -6,14 +6,19 @@
 <?php
 	$answer = array('q1'=> "1", 'q2'=> "1",'q3'=> "1",'q4'=> "1",'q5'=> "1",'q6'=> "1",'q7'=> "1",'q8'=> "1",'q9'=> "1",'q10'=> "1",'q11'=> "1",'q12'=> "1",'q13'=> "1",'q14'=> "1",'q15'=> "1",'q16'=> "1",'q17'=> "1",'q18'=> "1",'q19'=> "1",'q20'=> "1");
 	
-	// usename starts from 100
-	$username = 100;
-	function username()
-	{
-		global $username;
-		$username +=1;
-		return $username;
-	}
+	function toGetHighestUsername()
+		{
+			$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
+			$sql = "SELECT max(username) FROM r1detail";
+			$result = mysqli_query($db, $sql);
+			$row = $result ->fetch_assoc();
+			$username = $row['max(username)'];
+			// echo $username;
+			if(is_null($username))
+				return 100;
+			else
+				return ($username+1);
+		}
 
 	function pwd()
 	{
@@ -39,7 +44,7 @@
 				else
 					$marks -=1;
 			}
-		$username = username();
+		$username = toGetHighestUsername();
 		$pwd = pwd();
 		$ip = $row['ip'];
 		$submitTime = $row['submitTime'];
