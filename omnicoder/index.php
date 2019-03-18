@@ -27,12 +27,12 @@
 	}
 
 	//to register in database
-	function register($name, $course, $semester, $college, $email, $mobile)
+	function register($name, $course, $semester, $college, $email, $mobile, $language)
 	{
 		// echo($name."  ".$course."  ".$semester."  ".$college."  ".$email."  ".$mobile);
 		$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
 		$ip = get_client_ip();
-		$sql = "INSERT INTO student(ip, name, course, semester, college, email, mobile) VALUES('$ip', '$name', '$course', '$semester', '$college', '$email', '$mobile' )";
+		$sql = "INSERT INTO student(ip, name, course, semester, college, email, mobile, language) VALUES('$ip', '$name', '$course', '$semester', '$college', '$email', '$mobile', '$language' )";
 		
 		mysqli_query($db, $sql);
 
@@ -85,6 +85,8 @@
 			<input type="text" name="email"><br>
 			<span id="ques">Mobile number: </span>
 			<input type="text" name="mobile"><br>
+			<span id="ques">Language you know(separated by ',' comma): </span><br>
+			<textarea name="language"></textarea><br>
 
 			<input type="submit" name="sbt">
 		</form>
@@ -102,8 +104,9 @@
 				$college = $_POST['college'];
 				$email = $_POST['email'];
 				$mobile = $_POST['mobile'];
+				$language = $_POST['language'];
 				registerSolution();
-				register($name, $course, $semester, $college, $email, $mobile);
+				register($name, $course, $semester, $college, $email, $mobile, $language);
 
 
 			}
