@@ -36,15 +36,14 @@
 		$sql = "SELECT * FROM student where ip='$ip'";
 		$result = mysqli_query($db, $sql);
 
-		$str = "<table>";
-		$str = $str."<tr>  <th>Rank</th>  <th>Name</th> <th>Course</th> <th>College</th>  </tr>";
+		$str = "";
 		while($row = $result ->fetch_assoc())
 		{
 			// name, college, course
-			$str = $str."<tr>  <td>".($rank+1)."</td>  <td>".$row['name']."</td> <td>".$row['course']."</td> <td>".$row['college']."</td>  </tr>";
+			$str = "<tr>  <td>".($rank+1)."</td>  <td>".$row['name']."</td> <td>".$row['course']."</td> <td>".$row['college']."</td>  </tr>";
 		}
-		$str = $str."</table>";
-		echo  $str;
+		
+		return $str;
 	}
 
 	function updateRank($ip)
@@ -62,21 +61,27 @@
 	{
 		global $noSelected;
 		$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
-		$sql = "SELECT * FROM r1detail ORDER BY marks , submitTime DESC";
+		$sql = "SELECT * FROM r1detail ORDER BY marks DESC , submitTime ASC";
 		$result = mysqli_query($db, $sql);
 
-		$selected = 0;
+		$selected = 1;
+		$rank = 0;
+		echo "<H1> Rank List</H1>";
+		$str = "<table>";
+		$str = $str."<tr>  <th>Rank</th>  <th>Name</th> <th>Course</th> <th>College</th>  </tr>";
 		while($row = $result ->fetch_assoc()) {
 			if ($selected<=$noSelected)
 			{
-				echo "<H1> Rank List</H1>";
-				getName($row['ip'], $selected);
+				
+				
 				updateRank($row['ip']);
 				$selected+=1;
 			}
-			else 
-				break;
+			$str = $str.(getName($row['ip'], $rank));
+			$rank+=1;
    		}
+   		$str = $str."</table>";
+   		echo $str;
 	}
 
 	
@@ -84,7 +89,7 @@
 	{
 		$ip = get_client_ip();
 		$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
-		$sql = "SELECT * FROM r1detail where ip='$ip'";
+		$sql = "SELECT * FROM r1detail where ip='$ip' AND selected=1";
 		$result = mysqli_query($db, $sql);
 		$check =0;
 		$str = "";
