@@ -68,17 +68,42 @@
 	}
 ?>
 
+
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Round 2</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<h2>Login using your login credential</h2>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
+	<h2>Login using your login credentials</h2>
+	<p>(<i>In case you lost your credentials, ask a volunteer to help you</i>)</p>
 	<form method="post" action="">
-		Username<input type="text" name="username"><br>
-		Password<input type="password" name="password"><br>
+		<p style="position: absolute;top:20px;right:20px;font-size:80%"><span style="color:red;font-weight:bold">*</span>Required</p>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Username </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="username" placeholder="Username" maxlength="30" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Password </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="password" id="nameTag" name="password" placeholder="Password" maxlength="30" required>
+			</div>
+		</div>
 		<input type="submit" name="btn">
+		<input type="reset">
 	</form>
 
 	<?php
@@ -131,6 +156,7 @@
 		}
 
 	?>
-		
+</div>
+<footer>©Turington 2019</footer>
 </body>
 </html>
