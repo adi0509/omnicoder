@@ -76,31 +76,74 @@
 	</header>
 
 <div class="container">
-		<h1>Welcome to omnicoder</h1>
+	<form action="index.php" method="post">
+		<p style="position: absolute;top:20px;right:20px;font-size:80%"><span style="color:red;font-weight:bold">*</span>Required</p>
+		<h1>Welcome to Omnicoder</h1>
+		<p class="desc">Please fill in this form to continue.<br>Best of Luck👍</p>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Name: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="name" placeholder="Your name" maxlength="30" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Course: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="course" placeholder="Your course" maxlength="50" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Semester: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="semester" placeholder="Current semester" maxlength="30" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">College: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="college" placeholder="Your college's name" maxlength="50" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Email: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="email" placeholder="Your email address" maxlength="30" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Mobile number: </span> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<input type="name" id="nameTag" name="mobile" placeholder="Your mobile number" maxlength="10" required>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-25">
+				<label for="nameTag"><span id="ques">Language you know(separated by ',' comma): </span><br> <span style="color:red;font-weight:bold">*</span></label>
+			</div>
+			<div class="col-75">
+				<textarea name="language" required></textarea>
+			</div>
+		</div>
+		<input type="submit" name="sbt">
+		<input type="reset">
+	</form>
+</div>
 
-		<form action="index.php" method="post">
-			<span id="ques">Name: </span>
-			<input type="text" name="name"><br>
-			<span id="ques">Course: </span>
-			<input type="text" name="course"><br>
-			<span id="ques">Semester: </span>
-			<input type="text" name="semester"><br>
-			<span id="ques">College: </span>
-			<input type="text" name="college"><br>
-			<span id="ques">Email: </span>
-			<input type="text" name="email"><br>
-			<span id="ques">Mobile number: </span>
-			<input type="text" name="mobile"><br>
-			<span id="ques">Language you know(separated by ',' comma): </span><br>
-			<textarea name="language"></textarea><br>
-
-			<input type="submit" name="sbt">
-		</form>
-	</div>
 		<?php
 			if(isset($_POST['sbt']))
 			{
-
 				//this line update the page to go to instruction page
 				$_SESSION['page']=1;
 
