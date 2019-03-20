@@ -8,7 +8,7 @@
 
 <?php
 	//number of student selected in round 1
-	$noSelected = 2;
+	$noSelected = 1;
 
 	// Function to get the client IP address
 	function get_client_ip() {
@@ -30,17 +30,26 @@
 	    return $ipaddress;
 	}
 
+	function getMarks($ip)
+	{
+		$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
+		$sql = "SELECT marks  FROM r1detail where ip='$ip'";
+		$result = mysqli_query($db, $sql);
+		$row = $result ->fetch_assoc();
+		return $row['marks'];
+	}
+
 	function getName($ip, $rank)
 	{
 		$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
 		$sql = "SELECT * FROM student where ip='$ip'";
 		$result = mysqli_query($db, $sql);
-
+		$marks = getMarks($ip);
 		$str = "";
 		while($row = $result ->fetch_assoc())
 		{
 			// name, college, course
-			$str = "<tr>  <td>".($rank+1)."</td>  <td>".$row['name']."</td> <td>".$row['course']."</td> <td>".$row['college']."</td>  </tr>";
+			$str = "<tr>  <td>".($rank+1)."</td>  <td>".$marks."</td>  <td>".$row['name']."</td> <td>".$row['course']."</td> <td>".$row['college']."</td>  </tr>";
 		}
 		
 		return $str;
@@ -68,7 +77,7 @@
 		$rank = 0;
 		echo "<H1> Rank List</H1>";
 		$str = "<table>";
-		$str = $str."<tr>  <th>Rank</th>  <th>Name</th> <th>Course</th> <th>College</th>  </tr>";
+		$str = $str."<tr>  <th>Rank</th> <th>Marks</th>  <th>Name</th> <th>Course</th> <th>College</th>  </tr>";
 		while($row = $result ->fetch_assoc()) {
 			if ($selected<=$noSelected)
 			{
@@ -101,7 +110,7 @@
 		}
 
 		if($check==0)
-			$str = $str."Sorry you are not selected";
+			$str = $str.'<p id="error_msg">Sorry you are not selected</p>';
 
 		echo $str;
 

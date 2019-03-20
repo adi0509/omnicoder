@@ -31,3 +31,7 @@ table td,table th {border:1px solid #ccc;padding:5px}
 table th, table th:hover {text-align:left;padding:10px;cursor:default;background-color:#335;color:#fff}
 table tr:hover{background-color:#eee;cursor:pointer;}
 hr#spaced {margin:50px 0;border:1px solid #335;}
+/* #error { margin: 30px; border: 1px solid rgb(242,39,29); background: rgb(255,173,173);} */
+#error_msg { margin-top: 75px;padding: 30px; font-weight: bold; border: 1px solid rgb(242,39,29); background: rgb(255,173,173);}
+#error_msg_upload{ padding: 30px; font-weight: bold; border: 1px solid rgb(242,39,29); background: rgb(255,173,173);}
+#msg_upload { padding: 30px; font-weight: bold; border: 1px solid rgb(5,255,21); background: rgb(196,244,195);}

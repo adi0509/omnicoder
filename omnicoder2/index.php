@@ -139,12 +139,12 @@
 				}
 				else
 				{
-					$_SESSION['message']= "Someone has already login with this login credentials.";
+					$_SESSION['message']= '<span id="error"> Someone has already login with this login credentials.</span>';
 				}
 			}
 			else 
 			{
-				$_SESSION['message']= "Username/Password combination is not correct";
+				$_SESSION['message']= '<span id="error"> Username/Password combination is not correct </span>';
 			}
 
 			

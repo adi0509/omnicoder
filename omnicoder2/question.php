@@ -69,6 +69,15 @@
     	return $row["username"];
 	}
 
+	function delete_all_file($user)
+	{
+		$path = "./uploads/$user/";
+		if(!rmdir($path))
+		{
+		echo ("Could not remove $path");
+		}
+	}
+
 ?>
 
 <!DOCTYPE html>
@@ -152,19 +161,22 @@
 				// 		echo "<p>File is an image - " . $check["mime"] . ".</p>";
 				// }
 				// Check if file already exists
-				if($_FILES['fileToUpload$i']['tmp_name']!='')	
+				if($_FILES["fileToUpload$i"]['tmp_name']!='')	
 				{	if (file_exists($target_file)) {
-						echo "Sorry, file already exists.";
+						echo '<p id="error_msg_upload">Q'.$i.'. Sorry, file already exists.</p>';
 						$uploadOk = 0;
 						$x++;
 					}
-					if (move_uploaded_file($_FILES["fileToUpload$i"]["tmp_name"], $target_file)) 
+					else
 					{
-						echo "<p>The file ". basename( $_FILES["fileToUpload$i"]["name"]). " has been uploaded.</p>";
-					} 
-					else 
-					{
-						echo "<p>Sorry, there was an error uploading your file.</p>";
+						if (move_uploaded_file($_FILES["fileToUpload$i"]["tmp_name"], $target_file)) 
+						{
+							echo '<p id="msg_upload">Q'.$i.'. The file ( '.$_FILES["fileToUpload$i"]["name"].') has been uploaded.</p>';
+						} 
+						else 
+						{
+							echo '<p id="error_msg_upload">Q'.$i.'. Sorry, there was an error uploading your file.</p>';
+						}
 					}
 				}
 			}	
@@ -176,11 +188,15 @@
 		{
 			$user = getUsername();
 			$x = saveFile($user);
-			echo $x;
+			// echo $x;
 			if(!$x)
 			{
 				//Call this function if user successfully submit the form
 				update_submit_status();
+			}
+			else
+			{
+				// delete_all_file($user);
 			}
 		
 		}
