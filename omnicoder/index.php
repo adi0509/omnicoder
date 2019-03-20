@@ -96,7 +96,7 @@
 
 			<input type="submit" name="sbt">
 		</form>
-
+	</div>
 		<?php
 			if(isset($_POST['sbt']))
 			{
