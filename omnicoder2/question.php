@@ -54,7 +54,7 @@
       			SET submitTime=now()
       			WHERE ip='$ip'";
       	mysqli_query($db, $sql2);
-		// header("location: submitted.php");
+		header("location: submitted.php");
 	}
 
 	//function return status, that form is already submitted or not
@@ -108,7 +108,7 @@
 		}
 	</script>
 
-
+	<form method="post" enctype="multipart/form-data">
 		<?php
 		// ***************************question for omnicoder Round 2 **********************************
 
@@ -121,8 +121,7 @@
 			}
 		?>
 		<br>
-	<form method="post" enctype="multipart/form-data">
-		<input type="file" name="fileToUpload" required><br>
+	
 		<button type="submit" name="x">Upload file</button>
 		<!-- <input type="button" name="back" value="back"> -->
 	</form>
@@ -138,32 +137,52 @@
 
 		function saveFile($username)
 		{
-			$target_dir = "uploads/$username/";
-			$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+			$x = 0;
+			for( $i=1; $i<11; $i++)
+			{
+				$target_dir = "uploads/$username/";
+				$target_file = $target_dir . basename($_FILES["fileToUpload$i"]["name"]);
 
-			if(!is_dir($target_dir))
-				mkdir($target_dir);
+				if(!is_dir($target_dir))
+					mkdir($target_dir);
 
-			// Check if image file is a actual image or fake image
-			if(isset($_POST["submit"])) {
-				$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-					echo "<p>File is an image - " . $check["mime"] . ".</p>";
-			}
-
-				if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-					echo "<p>The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.</p>";
-				} else {
-					echo "<p>Sorry, there was an error uploading your file.</p>";
+				// Check if image file is a actual image or fake image
+				// if(isset($_POST["submit"])) {
+				// 	$check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+				// 		echo "<p>File is an image - " . $check["mime"] . ".</p>";
+				// }
+				// Check if file already exists
+				if($_FILES['fileToUpload$i']['tmp_name']!='')	
+				{	if (file_exists($target_file)) {
+						echo "Sorry, file already exists.";
+						$uploadOk = 0;
+						$x++;
+					}
+					if (move_uploaded_file($_FILES["fileToUpload$i"]["tmp_name"], $target_file)) 
+					{
+						echo "<p>The file ". basename( $_FILES["fileToUpload$i"]["name"]). " has been uploaded.</p>";
+					} 
+					else 
+					{
+						echo "<p>Sorry, there was an error uploading your file.</p>";
+					}
 				}
+			}	
+			return $x;
 		}
 
 		//This function is only called, in successfull submission
 		if(isset($_POST['x']))
 		{
 			$user = getUsername();
-			saveFile($user);
-		//Call this function if user successfully submit the form
-			update_submit_status();
+			$x = saveFile($user);
+			echo $x;
+			if(!$x)
+			{
+				//Call this function if user successfully submit the form
+				update_submit_status();
+			}
+		
 		}
 
 	?>
