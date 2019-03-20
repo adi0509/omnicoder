@@ -1,6 +1,9 @@
 <!-- 
 	######  DO NOT APPLY CSS IN THIS FILE  ######
 	This file is only used to update database of result.
+
+	######  MAI TO DAALUNGA CSS  #########
+	Mera man hora CSS daalne ka.
  -->
 
 <?php
@@ -70,13 +73,19 @@
 <html>
 <head>
 	<title>Calculate Result</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
 		<?php
-
-			//uncomment this to get result
-
 			updateTable()
 		?>
+</div>
+<footer>©Turington 2019</footer>
 </body>
 </html>
