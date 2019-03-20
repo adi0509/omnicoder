@@ -41,15 +41,20 @@
 
 ?>
 
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Instruction</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<H1>Instruction</H1>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
+	<h1>Instruction</h1>
 	<ol>
 		<li>Anyone who submit first(final submit time) will be given more prefrence.</li>
 		<li>Do not use Mobile Phone.</li>
@@ -62,8 +67,11 @@
 		<li>Make folder <b>(folder name is your username)</b> and put all your code <b>(each question is saved as "q1.cpp" or "q2.py")</b> in this folder, compress this folder and then submit.</li>
 		<li>You have to compile all your code in Docker container (Don't worry we'll help you if you don't know about docker).</li>
 	</ol>
-	<form action="" method="post">
-		<input type="checkbox" name="agree"><span> I had read all the instruction.</span><br>
+	<form method="post">
+		<label class="cont">I have read all the instruction.
+			<input type="checkbox" name="agree">
+			<span class="checkmark"></span>
+		</label>
 		<input type="submit" name="submitbtn" id="submitbtn">
 	</form>
 	<?php
@@ -81,5 +89,7 @@
 			}
 		// echo $_SESSION['page'];
 	?>
+</div>
+<footer>©Turington 2019</footer>
 </body>
 </html>
