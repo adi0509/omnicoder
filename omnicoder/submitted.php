@@ -14,6 +14,6 @@
 		<h1>Your answers were submitted successfully.</h1>
 		<h3>Please wait for the result.</h3>
 </div>
-<footer>©Turington</footer>
+<footer>©Turington 2019</footer>
 </body>
 </html>
