@@ -54,7 +54,7 @@
       			SET submitTime=now()
       			WHERE ip='$ip'";
       	mysqli_query($db, $sql2);
-		header("location: submitted.php");
+		// header("location: submitted.php");
 	}
 
 	//function return status, that form is already submitted or not
