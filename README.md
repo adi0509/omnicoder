@@ -1,6 +1,6 @@
 # omnicoder
 
-<h1>Work Remaining</h1>
+<h4>Work Remaining</h4>
 <ol>
   <li><del> Apply CSS </del></li>
   <li> Add timer round-2</li>
