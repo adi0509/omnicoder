@@ -113,14 +113,25 @@
 <html>
 <head>
 	<title>Result Of Round-1</title>
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
+	<header>
+		<img src="../../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
 	<?php
 		// this is used to rank all students	
 		showRanking();
-
+	?>
+<hr id="spaced">
+	<?php
 		// this function is used to get username and password
 		getRound2Credential	();
 	?>
+</div>
+<footer>©Turington 2019</footer>
 </body>
 </html>
