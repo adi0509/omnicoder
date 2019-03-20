@@ -130,17 +130,22 @@
 		<h1>Turington 2k19</h1>
 	</header>
 
-<div class="container">
-	<?php
-		// this is used to rank all students	
-		showRanking();
-	?>
-<hr id="spaced">
-	<?php
-		// this function is used to get username and password
-		getRound2Credential	();
-	?>
-</div>
+	<div class="container">
+		<?php
+			// this is used to rank all students	
+			showRanking();
+		?>
+		<hr id="spaced">
+		<?php
+			// this function is used to get username and password
+			getRound2Credential	();
+		?>
+		<br><br>
+		<?php
+			// uncomment this when all user redirect it to round 2
+			// echo '<a href="../../omnicoder2/"><button>Go to Round 2</button></a>';
+		?>
+	</div>
 <footer>©Turington 2019</footer>
 </body>
 </html>
