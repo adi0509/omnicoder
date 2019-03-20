@@ -6,7 +6,7 @@
   <li><del> Add "zip or tar" file upload using PHP </del></li>
 </ol>
 <h3>How to run omnicoder website after cloning</h3><br>
-<span><b>Step 1: </b>Import <b>omnicoder.sql</b> to your xampp</span><br><br>
+<span><b>Step 1: </b>Import <b>omnicoder.sql</b> to your xampp</span><br>
 <span><b>Step 2: </b>Go to <b>./omnicoder/</b></span><br>
 <span><b>Step 3: </b>Register and attempt round 1</span><br>
 <span><b>Step 4: </b>After all participant had submitted their result, then we'll calculate result by running <b>./omnicoder2/calculateResult.php</b></span><br>
