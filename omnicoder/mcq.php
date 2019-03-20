@@ -161,7 +161,7 @@
 
 			echo "Question ".($index+1);
 			echo "<br>";
-			$fileadd = "./Question/".($quesNo[$index]).".html";
+			$fileadd = "./Ques/".($quesNo[$index]).".html";
 			$myfile = fopen($fileadd , "r") or die("Unable to open file!");
 			echo fread($myfile,filesize($fileadd));
 			fclose($myfile);
