@@ -58,14 +58,20 @@
 	}
 
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Round 2 | Question</title>
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
-<body>
 
+<body>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
 	<h2>Welcome to round 2</h2>
 
 	<!-- THis form is used to get value of confirmation message from the last question -->
@@ -125,6 +131,7 @@
 		}
 
 	?>
-
+</div>
+<footer>©Turington 2019</footer>
 </body>
 </html>
