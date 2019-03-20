@@ -122,9 +122,15 @@
 <html>
 <head>
 	<title>MCQ round</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
 	<h1>Welcome to round 1</h1>
 
 	<!-- THis form is used to get value of confirmation message from the last question -->
@@ -149,7 +155,7 @@
 		}
 	</script>
 
-	<form method="post" action="">
+	<form method="post">
 		<?php
 		// ***************************question for omnicoder**********************************
 
@@ -241,6 +247,8 @@
 			update_submit_status($quesNo, $index);
 		}
 	?>
-</body>
+</div>
 
+<footer>©Turington 2019</footer>
+</body>
 </html>
