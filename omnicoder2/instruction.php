@@ -64,7 +64,9 @@
 		<li>There are 10 question, you have write code of each program.</li>
 		<li>You can only write <b>one question from one language</b>.</li>
 		<li>There is no negative marking in this round.</li>
-		<li>Make folder <b>(folder name is your username)</b> and put all your code <b>(each question is saved as "q1.cpp" or "q2.py")</b> in this folder, compress this folder and then submit.</li>
+		<li> <b>Each question is saved as "q1.cpp" etc.</b> </li>
+		<li>In each program,<b>(in the first line)</b> you should comment your question number and languauge you are using.</li>
+		<li>If you find any error while uploading your code, then repload each question again.</li>
 		<li>You have to compile all your code in Docker container (Don't worry we'll help you if you don't know about docker).</li>
 	</ol>
 	<form method="post">
