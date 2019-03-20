@@ -45,25 +45,35 @@
 <html>
 <head>
 	<title>Instruction</title>
-	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-	<H1>Instruction</H1>
+	<header>
+		<img src="../favicon.png" style="height:100%">
+		<h1>Turington 2k19</h1>
+	</header>
+
+<div class="container">
+	<h1>Instructions</h1>
 	<ol>
-		<li>Anyone who submit first(final submit time) will be given more prefrence.</li>
+		<li>Anyone who submits first(final submit time) will be given more prefrence.</li>
 		<li>Do not use Mobile Phone.</li>
 		<li>Do not use Internet.</li>
-		<li>Any participant found doing cheating can be eliminate by our volunteers.</li>
+		<li>Any participant found doing cheating shall be eliminated immediately.</li>
 		<li>Please co-orporate with our voluteers.</li>
 		<li>Selection for Round-2 will be based on number of registration.</li>
 		<li>Round 1 Consist 30% and Round 2 consist of 70% weightage.</li>
 		<li>Each Question has 4 options, and only one of them is correct.</li>
 		<li>There is a <b>negative marking</b> of -1 for each incorrect answer.</li>
 	</ol>
-	<form action="" method="post">
-		<input type="checkbox" name="agree"><span> I had read all the instruction.</span><br>
+	<form method="post">
+		<label class="cont">I have read all the instruction.
+			<input type="checkbox" name="agree">
+			<span class="checkmark"></span>
+		</label>
 		<input type="submit" name="submitbtn" id="submitbtn">
 	</form>
+</div>
 	<?php
 		session_start();
 
@@ -86,5 +96,6 @@
 				header("location: mcq.php");
 			}
 	?>
+<footer>©Turington 2019</footer>
 </body>
 </html>
