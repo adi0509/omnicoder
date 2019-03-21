@@ -38,13 +38,6 @@ CREATE TABLE `r1detail` (
   `selected` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `r1detail`
---
-
-INSERT INTO `r1detail` (`ip`, `marks`, `username`, `pwd`, `submitTime`, `loginStatus`, `selected`) VALUES
-('10.42.0.148', 16, '100', 'STHSV', '2019-03-18 11:15:35', 0, 1),
-('127.0.0.1', 4, '102', 'MUQAU', '2019-03-18 11:18:24', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -92,14 +85,6 @@ CREATE TABLE `solution` (
   `submitTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `solution`
---
-
-INSERT INTO `solution` (`ip`, `q1`, `q2`, `q3`, `q4`, `q5`, `q6`, `q7`, `q8`, `q9`, `q10`, `q11`, `q12`, `q13`, `q14`, `q15`, `q16`, `q17`, `q18`, `q19`, `q20`, `submit`, `submitTime`) VALUES
-('10.42.0.148', 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, '2019-03-18 11:15:35'),
-('10.42.0.178', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, '2019-03-18 12:04:11'),
-('127.0.0.1', 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, '2019-03-18 11:18:24');
 
 -- --------------------------------------------------------
 
@@ -118,14 +103,6 @@ CREATE TABLE `student` (
   `language` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`ip`, `name`, `course`, `semester`, `college`, `email`, `mobile`, `language`) VALUES
-('10.42.0.148', 'Redmi', 'Android', '4', 'Xiomi', 'Redmi@xiami.com', '78890', NULL),
-('10.42.0.178', 'Lenovo', 'Lenovo', '2', 'Lenovo', 'Lenovo', 'Lenovo', 'Php, python, c++, C, java'),
-('127.0.0.1', 'local host', 'local host', '2', 'local host', 'local host', 'local host', NULL);
 
 --
 -- Indexes for dumped tables
