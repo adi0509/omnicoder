@@ -37,7 +37,7 @@
 		mysqli_query($db, $sql);
 
 		//redirect to instruction page
-		header("location: instruction.php");
+		header("location: ./instruction/");
 	}
 
 	function registerSolution()
@@ -162,18 +162,18 @@
 
 			if($_SESSION['page']==1)
 			{
-				header("location: instruction.php");
+				header("location: ./instruction/");
 			}
 			elseif($_SESSION['page']==2)
 			{
-				header("location: mcq.php");
+				header("location: ./mcq/");
 			}
 			// echo $_SESSION['page'];
 
 			//if form is already submitter redirect it to submitted page
 			if(getSubmitStatus()!=0)
 			{
-				header("location: submitted.php");
+				header("location: ./submitted/");
 			}	
 		?>
 

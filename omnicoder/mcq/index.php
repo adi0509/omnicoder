@@ -45,7 +45,7 @@
       			WHERE ip='$ip'";
       	// echo $sql;
 		mysqli_query($db, $sql);
-		header("location: submitted.php");
+		header("location: ../submitted/");
 	}
 
 	//Function which checks in database and return the saved answer
@@ -67,7 +67,7 @@
 		if($index>0)
 			{
 				$_SESSION['index'] = $_SESSION['index'] - 1;
-				header("location: mcq.php");
+				header("location: ../mcq/");
 			}
 	}
 
@@ -90,7 +90,7 @@
       			WHERE ip='$ip'";
       	// echo $sql;
 		mysqli_query($db, $sql);
-		header("location: mcq.php");//refresh page
+		header("location: ../mcq/");//refresh page
 	}
 
 	//Function to do when clear button is pressed
@@ -122,11 +122,11 @@
 <html>
 <head>
 	<title>MCQ round</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<header>
-		<img src="../favicon.png" style="height:100%">
+		<img src="../../favicon.png" style="height:100%">
 		<h1>Turington 2k19</h1>
 	</header>
 
@@ -161,7 +161,7 @@
 
 			echo "Question ".($index+1);
 			echo "<br>";
-			$fileadd = "./Ques/".($quesNo[$index]).".html";
+			$fileadd = "../Ques/".($quesNo[$index]).".html";
 			$myfile = fopen($fileadd , "r") or die("Unable to open file!");
 			echo fread($myfile,filesize($fileadd));
 			fclose($myfile);
@@ -214,7 +214,7 @@
 		//if form is already submitter redirect it to submitted page
 		if(getSubmitStatus($quesNo, $index)!=0)
 		{
-			header("location: submitted.php");
+			header("location: ../submitted/");
 		}	
 	?>
 
@@ -225,7 +225,7 @@
 			if($index<19)
 				{
 					$_SESSION['index'] = $_SESSION['index'] + 1;
-					header("location: mcq.php");
+					header("location: ../mcq/");
 				}
 			// this line will execute when user submit last question
 			else if($index==19)

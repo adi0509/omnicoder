@@ -38,7 +38,7 @@
 	//if form is already submitter redirect it to submitted page
 	if(getSubmitStatus()!=0)
 	{
-		header("location: submitted.php");
+		header("location: ../submitted/");
 	}	
 
 	function update_submit_status()
@@ -54,7 +54,7 @@
       			SET submitTime=now()
       			WHERE ip='$ip'";
       	mysqli_query($db, $sql2);
-		header("location: submitted.php");
+		header("location: ../submitted/");
 	}
 
 	//function return status, that form is already submitted or not
@@ -93,11 +93,11 @@
 <html>
 <head>
 	<title>Round 2 | Questions</title>
-	<link rel="stylesheet" type="text/css" href="../style.css">
+	<link rel="stylesheet" type="text/css" href="../../style.css">
 </head>
 <body>
 	<header>
-		<img src="../favicon.png" style="height:100%">
+		<img src="../../favicon.png" style="height:100%">
 		<h1>Turington 2k19</h1>
 	</header>
 
@@ -131,7 +131,7 @@
 		// ***************************question for omnicoder Round 2 **********************************
 
 			for ($i=0; $i < 10; $i++) { 
-				$fileadd = "./Question/".($i+1).".html";
+				$fileadd = "../Ques/".($i+1).".html";
 				$myfile = fopen($fileadd , "r") or die("Unable to open file!");
 				echo fread($myfile,filesize($fileadd));
 				echo "<br><br>";
@@ -158,7 +158,7 @@
 			$x = 0;
 			for( $i=1; $i<11; $i++)
 			{
-				$target_dir = "uploads/$username/";
+				$target_dir = "../uploads/$username/";
 				$target_file = $target_dir . basename($_FILES["fileToUpload$i"]["name"]);
 
 				if(!is_dir($target_dir))
@@ -206,7 +206,7 @@
 			else
 			{
 				// delete_all_file($user);
-				delete_directory("./uploads/$user");
+				delete_directory("../uploads/$user/");
 			}
 		
 		}

@@ -8,7 +8,7 @@
 
 <?php
 	//number of student selected in round 1
-	$noSelected = 1;
+	$noSelected = 2;
 
 	// Function to get the client IP address
 	function get_client_ip() {

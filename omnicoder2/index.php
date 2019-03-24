@@ -109,18 +109,20 @@
 	<?php
 		if(empty($_SESSION['userName'])!=1)
 		{
-			 header("location: instruction.php"); //redirect
+			 header("location: ./instruction"); //redirect
 		}
 
 		if(alreadyLogin())
 		{
-			header("location: instruction.php"); //redirect
+			header("location: ./instruction"); //redirect
 		}
 
 		if(isset($_POST['btn']))
 		{
-			$username = $_POST['username'];
-			$password = $_POST['password'];
+			$username = htmlentities($_POST['username']);
+			$password = htmlentities($_POST['password']);
+			// $username = $_POST['username'];
+			// $password = $_POST['password'];
 
 			$db = mysqli_connect('localhost', 'root', '', 'omnicoder');
 			$sql = "SELECT * FROM r1detail WHERE username='$username' AND pwd='$password'";
@@ -135,7 +137,7 @@
 					$_SESSION['userName']= $username;
 					updateLoginStatus($row['ip']);
 					updateRound2Table($username);
-					header("location: instruction.php"); //redirect;
+					header("location: ./instruction"); //redirect;
 				}
 				else
 				{
