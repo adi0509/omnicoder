@@ -171,13 +171,13 @@
 				// }
 				// Check if file already exists
 				if($_FILES["fileToUpload$i"]['tmp_name']!='')	
-				{	if (file_exists($target_file)) {
-						echo '<p id="error_msg_upload">Q'.$i.'. Sorry, file already exists.</p>';
-						$uploadOk = 0;
-						$x++;
-					}
-					else
-					{
+				{	
+					// if (file_exists($target_file)) {
+					// 	echo '<p id="error_msg_upload">Q'.$i.'. Sorry, file already exists.</p>';
+					// 	$x++;
+					// }
+					// else
+					// {
 						if (move_uploaded_file($_FILES["fileToUpload$i"]["tmp_name"], $target_file)) 
 						{
 							echo '<p id="msg_upload">Q'.$i.'. The file ( '.$_FILES["fileToUpload$i"]["name"].') has been uploaded.</p>';
@@ -186,7 +186,7 @@
 						{
 							echo '<p id="error_msg_upload">Q'.$i.'. Sorry, there was an error uploading your file.</p>';
 						}
-					}
+					// }
 				}
 			}	
 			return $x;
@@ -206,7 +206,8 @@
 			else
 			{
 				// delete_all_file($user);
-				delete_directory("../uploads/$user/");
+				// delete_directory("../uploads/$user/");
+				echo '<p id="error_msg_upload">Something went WRONG!!, 	Please Try Again</p>';
 			}
 		
 		}
