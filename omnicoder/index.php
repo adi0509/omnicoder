@@ -130,7 +130,7 @@
 		</div>
 		<div class="row">
 			<div class="col-25">
-				<label for="nameTag"><span id="ques">Language you know(separated by ',' comma): </span><br> <span style="color:red;font-weight:bold">*</span></label>
+				<label for="nameTag"><span id="ques">Programming language you know(separated by ',' comma): </span><br> <span style="color:red;font-weight:bold">*</span></label>
 			</div>
 			<div class="col-75">
 				<textarea name="language" required></textarea>
