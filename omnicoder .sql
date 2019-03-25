@@ -1,33 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 4.8.4
--- https://www.phpmyadmin.net/
---
--- Host: localhost
--- Generation Time: Mar 18, 2019 at 07:37 AM
--- Server version: 10.1.37-MariaDB
--- PHP Version: 7.2.13
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Database: `omnicoder`
---
-
--- --------------------------------------------------------
-
---
--- Table structure for table `r1detail`
---
-
 CREATE TABLE `r1detail` (
   `ip` varchar(16) NOT NULL,
   `marks` int(11) DEFAULT NULL,
@@ -38,13 +8,6 @@ CREATE TABLE `r1detail` (
   `selected` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
--- --------------------------------------------------------
-
---
--- Table structure for table `round2`
---
-
 CREATE TABLE `round2` (
   `ip` varchar(18) DEFAULT NULL,
   `newip` varchar(18) NOT NULL,
@@ -52,12 +15,6 @@ CREATE TABLE `round2` (
   `username` varchar(5) DEFAULT NULL,
   `submitTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `solution`
---
 
 CREATE TABLE `solution` (
   `ip` varchar(20) NOT NULL,
@@ -85,13 +42,6 @@ CREATE TABLE `solution` (
   `submitTime` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student`
---
-
 CREATE TABLE `student` (
   `ip` varchar(20) NOT NULL,
   `name` varchar(30) NOT NULL,
@@ -103,38 +53,16 @@ CREATE TABLE `student` (
   `language` varchar(300) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `r1detail`
---
 ALTER TABLE `r1detail`
   ADD PRIMARY KEY (`ip`);
 
---
--- Indexes for table `round2`
---
 ALTER TABLE `round2`
   ADD PRIMARY KEY (`newip`);
 
---
--- Indexes for table `solution`
---
 ALTER TABLE `solution`
   ADD PRIMARY KEY (`ip`);
 
---
--- Indexes for table `student`
---
 ALTER TABLE `student`
   ADD PRIMARY KEY (`ip`),
   ADD UNIQUE KEY `email` (`email`),
   ADD UNIQUE KEY `mobile` (`mobile`);
-COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
