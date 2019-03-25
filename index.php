@@ -1,3 +1,4 @@
+<!-- stay this file inside omnicoder folder -->
 <?php
 	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
 		$uri = 'https://';
@@ -5,6 +6,6 @@
 		$uri = 'http://';
 	}
 	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/omnicoder/omnicoder/');
+	header("location: ./omnicoder/");
 	exit;
 ?>
