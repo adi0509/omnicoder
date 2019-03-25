@@ -1,27 +1,28 @@
+@font-face{font-family:"FaisalsFont";src:url('FaisalsFont.ttf');}
 html,body{scroll-behavior:smooth;}
-body {margin:0;padding:0;font-family:'Montserrat';background-color:#335;width:100%}
+body {margin:0;padding:0;font-family:'FaisalsFont';background-color:#335;width:100%}
 header,footer{position:fixed;padding:10px;width:100%;background-color:#f81;z-index:1}
 header{top:0;height:7.5%}
 header img {float:left;margin-left:100px;}
 header h1 {position:absolute;left:50%;transform:translateX(-50%);}
 footer{bottom:0;height:2.5%;}
-.container {position:absolute;padding:25px 50px;top:7.5%;left:50%;transform:translateX(-50%);width:50%;background-color:#fff;box-shadow:1px 1px 2px 0 #ccc;margin:0;}
+.container {position:absolute;padding:25px 50px;top:7.5%;left:50%;transform:translateX(-50%);width:60%;background-color:#fff;box-shadow:1px 1px 2px 0 #ccc;margin:0;padding-bottom:100px}
 .desc {font-size:110%;}
 .col-25 {flex:25%;margin-top:33px;padding:50px 0 0;}
 .col-75 {flex:75%;margin-top:33px;}
 .row {display:flex;flex-wrap:wrap;}
 .row:after {content:"";display:table;clear:both;}
-input,textarea {font-size:100%;font-family:Montserrat,sans-serif;border:none;border-bottom:2px solid #ccc;width:100%;padding:10px 20px;}
+input,textarea {font-size:100%;font-family:FaisalsFont,sans-serif;border:none;border-bottom:2px solid #ccc;width:100%;padding:10px 20px;}
 textarea {resize:vertical;}
 input:focus,textarea:focus {outline:none !important;border-bottom:2px solid #00f;transition-duration:1s;}
-input[type=submit],input[type=reset],input[type=file],button {font-family:"Handlee",sans-serif;background-color:#194b7d;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;float:right;margin:20px 5px;width:auto;}
+input[type=submit],input[type=reset],input[type=file],button {font-family:"FaisalsFont",sans-serif;background-color:#194b7d;color:white;padding:12px 20px;border:none;border-radius:4px;cursor:pointer;float:right;margin:20px 5px;width:auto;}
 input[type=file],button{float:none;font-size:100%}
 input[type=submit]:hover,input[type=submit]:focus,input[type=reset]:hover,input[type=reset]:focus,button:hover,button:focus {background-color:#193264;}
 input[type=checkbox] {border:1px solid #ccc;}
 .col-25 {float:left;width:25%;margin-top:6px;}
 .cont {display:block;position:relative;padding-left:35px;cursor:pointer;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;margin-bottom:20px}
 .cont input {height:0;width:0;margin-top:-2px}
-.checkmark {position:absolute;left:0;height:25px;width:25px;background-color:#eee;;border-radius:50%}
+.checkmark {position:absolute;left:0;height:25px;width:25px;background-color:#ccc;;border-radius:50%}
 .cont input:checked ~ .checkmark {background-color:#2196F3;}
 .checkmark:after {content:"";position:absolute;display:none;}
 .cont input:checked ~ .checkmark:after {display:block;}
