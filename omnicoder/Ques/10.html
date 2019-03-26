@@ -1,18 +1,23 @@
-<div id="Q">
-	<span id="Qdesc">Sample Question #10 bla bla bla bla bla bla bla bla bla bla bla bla </span>
-		<label class="cont"> A1
+<div id="Q"><br>
+	<span id="Qdesc"><p>Consider the following pseudo code. Assume that IntQueue is an integer queue. What does the function fun do?</p>
+<p style="padding-left: 30px;">void fun(int n)<br /> {</p>
+<p style="padding-left: 60px;">IntQueue q = new IntQueue();<br /> q.enqueue(0);<br /> q.enqueue(1);<br /> for (int i = 0; i &lt; n; i++)<br /> {</p>
+<p style="padding-left: 60px;">int a = q.dequeue();<br /> int b = q.dequeue();<br /> q.enqueue(b);<br /> q.enqueue(a + b);<br /> print(a);</p>
+<p style="padding-left: 60px;">}</p>
+<p style="padding-left: 30px;">}</p></span><br><br>
+		<label class="cont"> Prints numbers from 0 to n-1
 			<input type="radio" name="q10" value="a">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> B1
+		<label class="cont"> Prints numbers from n-1 to 0
 			<input type="radio" name="q10" value="b">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> C1
+		<label class="cont"> Prints first n Fibonacci numbers
 			<input type="radio" name="q10" value="c">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> D1
+		<label class="cont"> Prints first n Fibonacci numbers in reverse order
 			<input type="radio" name="q10" value="d">
 			<span class="checkmark"></span>
 		</label>

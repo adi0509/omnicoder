@@ -1,18 +1,21 @@
 <div id="Q">
-	<span id="Qdesc">Sample Question #11 bla bla bla bla bla bla bla bla bla bla bla bla </span>
-		<label class="cont"> A1
+	<span id="Qdesc"><p>What is the output?</p>
+<p style="padding-left: 30px;">#include &lt;stdio.h&gt;<br /> int main()<br /> {</p>
+<p style="padding-left: 60px;">int a[5] = {1,2,3,4,5};<br /> int *ptr = (int*)(&amp;a+1);<br /> printf("%d %d", *(a+1), *(ptr-1));<br /> return 0;</p>
+<p style="padding-left: 30px;">}</p></span>
+		<label class="cont"> Segmentation Fault
 			<input type="radio" name="q11" value="a">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> B1
+		<label class="cont"> Garbage Value
 			<input type="radio" name="q11" value="b">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> C1
+		<label class="cont"> 2 1
 			<input type="radio" name="q11" value="c">
 			<span class="checkmark"></span>
 		</label>
-		<label class="cont"> D1
+		<label class="cont"> 2 5
 			<input type="radio" name="q11" value="d">
 			<span class="checkmark"></span>
 		</label>
