@@ -102,8 +102,10 @@
 	</header>
 
 <div class="container">
-	<h2>Welcome to round 2</h2>
-
+	<h2> Welcome to round 2</h2>
+		<?php
+			echo '<a href="../help/" target="_blank"><button>Docker Help</button></a>';
+		?>
 	<!-- This form is used to get value of confirmation message from the last question -->
 	<form style="display: none;" id="myform" action="" method="post">
         <input type="text" id="x" name="x">

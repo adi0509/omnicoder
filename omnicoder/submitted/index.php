@@ -15,7 +15,7 @@
 		<h3>Please wait for the result.</h3>
 		<?php
 			// uncomment this when all user submit their test
-			// echo '<a href="../result/"><button>Check Your Result</button></a>';
+			 echo '<a href="../result/"><button>Check Your Result</button></a>';
 		?>
 		
 </div>

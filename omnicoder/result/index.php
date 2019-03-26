@@ -8,7 +8,7 @@
 
 <?php
 	//number of student selected in round 1
-	$noSelected = 2;
+	$noSelected = 4;
 
 	// Function to get the client IP address
 	function get_client_ip() {
@@ -143,7 +143,7 @@
 		<br><br>
 		<?php
 			// uncomment this when all user redirect it to round 2
-			// echo '<a href="../../omnicoder2/"><button>Go to Round 2</button></a>';
+			   echo '<a href="../../omnicoder2/"><button>Go to Round 2</button></a>';
 		?>
 	</div>
 <footer>©Turington 2019</footer>
