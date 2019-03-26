@@ -143,7 +143,7 @@
 		<br><br>
 		<?php
 			// uncomment this when all user redirect it to round 2
-			   echo '<a href="../../omnicoder2/"><button>Go to Round 2</button></a>';
+			   // echo '<a href="../../omnicoder2/"><button>Go to Round 2</button></a>';
 		?>
 	</div>
 <footer>©Turington 2019</footer>
