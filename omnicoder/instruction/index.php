@@ -61,16 +61,21 @@
 		<li>Do not use Internet.</li>
 		<li>Any participant found doing cheating shall be eliminated immediately.</li>
 		<li>Please co-orporate with our voluteers.</li>
-		<li>Round 1 Consist 30% and Round 2 consist of 70% weightage.</li>
+		<!-- <li>Round 1 Consist 30% and Round 2 consist of 70% weightage.</li> -->
 		<li>Each Question has 4 options, and only one of them is correct.</li>
-		<li>There is a <b>negative marking</b> of -1 for each incorrect answer.</li>
+		<li>There is a <b>negative marking</b> of -1 for each incorrect answer and 0 marks for not attempting and +4 for correct.</li>
 	</ol>
 	<form method="post">
 		<label class="cont">I have read all the instruction.
 			<input type="checkbox" name="agree">
 			<span class="checkmark"></span>
 		</label>
-		<input type="submit" name="submitbtn" id="submitbtn">
+
+		<!-- This button is to start the round 1 MCQ -->
+		<?php
+			// echo '<input type="submit" name="submitbtn" id="submitbtn">';
+		?>
+		
 	</form>
 </div>
 	<?php

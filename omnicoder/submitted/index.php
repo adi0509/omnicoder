@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html>	
 <html>
 <head>
 	<title>MCQ Round 1</title>

@@ -1,35 +1,35 @@
 <u>1. golang<br><br></u>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name gotemp golang:alpine<br><br>
-      //to compile<br>
-      go run hello-world.go<br>
+      a_go go build filename.go
 <br>
+
 <u>2. C/C++</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name cpptemp gcc:4.9<br>
+      a_gnu gcc filename.c
+      a_gnu g++ filename.cpp
 <br>      
 <u>3. Python2</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name pytemp python:2<br>
+      a_py2 python2 filename.py
 <br>
 <u>4. Python3</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name pytemp python:3<br>
+      a_py3 python3 filename.py
 <br>
 <u>5. Php</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name phptemp php:7.2-cli<br>
+      a_php php filename.php
 <br>
 <u>6. Node</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name nodetemp node<br>
+      a_node node filename.js
 <br>      
 <u>7. Haskell</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name haskelltemp haskell<br>
+      a_haskell ghc hello.hs
 <br>      
 <u>8. Ruby</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name rubytemp ruby<br>
+      a_ruby ruby hello-world.rb
 <br>      
 <u>9. R-lang</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name rtemp r-base<br>
+      a_r Rscript test.R 
 <br>
 <u>10. Swift</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name swifttemp swift<br>
+      a_swiftc filename.swift
 <br>
 <u>11. Perl</u><br><br>
-      sudo docker container run -it --rm -w /temp -v $(pwd):/temp --name perltemp perl<br>
+      a_perl perl hello.pl
 <br>
