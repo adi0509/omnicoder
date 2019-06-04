@@ -1,10 +1,10 @@
 # omnicoder
+This is a website made in PHP, and was used in Computer Science Department fest in Ramanujan College. Omnicoder is a event organised by us. In this event we have 2 rounds:
 
-<h4>Work Remaining</h4>
-<ol>
-  <li><del> Apply CSS </del></li>
-  <li><del> Add "zip or tar" file upload using PHP </del></li>
-</ol>
+<b>Round-1</b> we have 20 MCQ round with negative marking of -1 for each wrong answer and +4 for each correct answer. All participants will register and start giving answer and at the end we have ranking page and selected students will get login credetial for next round. 
+
+<b>Round-2</b> This round has 10 question, participant can use any one language for any one question. Those whose maximum are correct in minimum time will be a winner.
+
 <h3>How to run omnicoder website after cloning</h3>
 
 <span><b>Step 1: </b>Import <b>omnicoder.sql</b> to your xampp</span><br>
