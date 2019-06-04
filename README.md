@@ -1,9 +1,9 @@
 # omnicoder
-This is a website made in PHP, and was used in Computer Science Department fest in Ramanujan College. Omnicoder is a event organised by us. In this event we have 2 rounds:
+This is a website made in PHP, and was used in Computer Science Department fest ([Turington](https://turington.in/)) of [Ramanujan College](http://www.rcdu.in/). In this event we have 2 rounds:
 
-<b>Round-1</b> we have 20 MCQ round with negative marking of -1 for each wrong answer and +4 for each correct answer. All participants will register and start giving answer and at the end we have ranking page and selected students will get login credetial for next round. 
+<b>Round-1</b> we have 20 MCQ round with negative marking of -1 for each wrong answer and +4 for each correct answer. All participants will register and start giving answer and at the end we have ranking page and selected students will get login credetial for next round. (In this round we have to answer checked automatically and ranking will be based on marks and submit time)
 
-<b>Round-2</b> This round has 10 question, participant can use any one language for any one question. Those whose maximum are correct in minimum time will be a winner.
+<b>Round-2</b> This round has 10 question, participant can use any one language for any one question. Those whose maximum are correct in minimum time will be a winner. (In this round we have to check each answer manually)
 
 <h3>How to run omnicoder website after cloning</h3>
 
