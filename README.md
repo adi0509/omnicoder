@@ -1,11 +1,13 @@
-# omnicoder
-This is a website made in PHP, and was used in Computer Science Department fest ([Turington](https://turington.in/)) of [Ramanujan College](http://www.rcdu.in/). In this event we have 2 rounds:
+# Omnicoder
+This is a web-app built with PHP, and was used in Computer Science Department fest ([Turington](https://turington.in/)) of [Ramanujan College](http://www.rcdu.in/).<br>
+In this event we have 2 rounds:<br>
 
-<b>Round-1</b> we have 20 MCQ round with negative marking of -1 for each wrong answer and +4 for each correct answer. All participants will register and start giving answer and at the end we have ranking page and selected students will get login credetial for next round. (In this round we have to answer checked automatically and ranking will be based on marks and submit time)
+| Round | No of questions	| Marks for each correct answer	| Negative marking								| Instructions								|
+|-------|-----------------|-------------------------------|---------------------------------|-----------------------------|
+| 1.		| 20							| 4 														| Yes (-1 for each wrong answer)	| <b>1.</b> Register using the link provided and begin the test<br> <b>2.</b> You'll reach a ranking page at the end where selected students will get login credentials for the next round.<br><br> The answer checking for this round is automatic and ranking will be based on marks and submission time |
+| 2.		| 10							| 5															| none														| <b>1. User can use any one language of his/her choice to answer questions in this round</b><br><b>2.</b> Login using the credentials provided to you earlier and start answering the questions.<br><br>There will be a manual checking for the answers in this round. The participant wo gets maximum correct answers in minimum time will be declared the winner. |
 
-<b>Round-2</b> This round has 10 question, participant can use any one language for any one question. Those whose maximum are correct in minimum time will be a winner. (In this round we have to check each answer manually)
-
-<h3>How to run omnicoder website after cloning</h3>
+<h3>How to run omnicoder web-app after cloning</h3>
 
 <span><b>Step 1: </b>Import <b>omnicoder.sql</b> to your xampp</span><br>
 <span><b>Step 2: </b>Go to <b>./omnicoder/</b></span><br>
